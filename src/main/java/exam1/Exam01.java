@@ -18,6 +18,13 @@ public class Exam01 {
 
     public String getScore() {
 
+        if (Math.abs(playerAWin-playerBWin)==1 && (playerAWin>=4 || playerBWin>=4)){
+            if (playerBWin-playerAWin==1)
+                return "Advantage Player B";
+            else if (playerAWin-playerBWin ==1)
+                return "Advantage Player A";
+        }
+
         if (playerAWin==1 && playerBWin==0){
             return "Fifteen-Love";
         }
@@ -41,8 +48,6 @@ public class Exam01 {
             return "Forty-Thirty";
         else if (playerAWin==3 && playerBWin==3)
             return "Deuce";
-        else if (playerAWin==4 && playerBWin ==3)
-            return "Advantage Player A";
         else if (playerAWin==4) {
             if (playerBWin==4)
                 return "Deuce";
@@ -57,8 +62,6 @@ public class Exam01 {
         }
         else if (playerBWin==3)
             return "Love-Forty";
-        else if (playerBWin==4 && playerAWin==3)
-            return "Advantage Player B";
         else if (playerBWin==4)
             return "Win for Player B";
 
