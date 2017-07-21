@@ -57,8 +57,11 @@ public class Exam01 {
         }
         else if (playerBWin==3)
             return "Love-Forty";
+        else if (playerBWin==4 && playerAWin==3)
+            return "Advantage Player B";
         else if (playerBWin==4)
             return "Win for Player B";
+
         return "Love-All";
     }
 
