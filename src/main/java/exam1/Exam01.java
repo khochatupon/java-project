@@ -13,6 +13,7 @@ public class Exam01 {
     }
 
     public void playerBWin() {
+        playerBWin++;
     }
 
     public String getScore() {
@@ -25,6 +26,14 @@ public class Exam01 {
             return "Forty-Love";
         else if (playerAWin==4)
             return "Win for Player A";
+        else if (playerBWin==1)
+            return "Love-Fifteen";
+        else if (playerBWin==2)
+            return "Love-Thirty";
+        else if (playerBWin==3)
+            return "Love-Forty";
+        else if (playerBWin==4)
+            return "Win for Player B";
         return "Love-All";
     }
 
