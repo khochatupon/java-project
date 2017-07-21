@@ -18,6 +18,12 @@ public class Exam01 {
 
     public String getScore() {
 
+        if (Math.abs(playerAWin-playerBWin)==2 && (playerAWin>=4 && playerBWin>=4)){
+            if (playerAWin > playerBWin)
+                return "Win for Player A";
+            return "Win for Player B";
+        }
+
         if (Math.abs(playerAWin-playerBWin)==1 && (playerAWin>=4 || playerBWin>=4)){
             if (playerBWin-playerAWin==1)
                 return "Advantage Player B";
